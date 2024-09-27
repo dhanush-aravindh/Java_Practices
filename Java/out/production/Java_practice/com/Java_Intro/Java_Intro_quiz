@@ -1,0 +1,321 @@
+Question 1/20
+Which of the following main method declarations are valid?
+Explanation
+public static void main(String args){} // incorrect because the main function does not contain String[] as an argument.
+
+
+public synchronized final strictfp void main(String[] args){} // incorrect because static keyword is missing.
+
+
+public static int main(String… args){} //incorrect because we can’t take int as a return type.
+
+
+public static synchronized final strictfp void main(String… args){}// valid
+
+Question 2/20
+Which of the following identifiers is invalid?
+Explanation
+Here is the syntax for valid Java identifiers:
+Each identifier must have at least one character.
+The first character must be picked from: alpha, underscore, or dollar sign. The first character can not be a digit.
+The rest of the characters (besides the first) can be from: alpha, digit, underscore, or dollar sign.
+We can’t start identifier names with a digit in java.Hence, 123totalNumber is an invalid identifier.
+
+Question 3/20
+If a method won’t return anything compulsory that method should be declared with________ return type in java.
+Explanation
+If a method won’t return anything compulsory that method should be declared with the void return type in java but it is optional in C++.
+
+Question 4/20
+What is the range of int data type in java
+Explanation
+Int occupies 4 bytes in memory. Its range is from -2147483648 to -2147483647.
+
+Question 5/20
+What is the range of boolean data type in java?
+Explanation
+The range of boolean data type is not applicable but allowed values are true or false.
+
+Question 6/20
+What is the default value of boolean data type in java?
+Explanation
+The default value of the boolean data type is false.
+
+Question 7/20
+Which among the following variable declarations is invalid?
+Explanation
+By default every integral literal is int type but we can specify explicitly as long type by suffixing with small “l” (or) capital “L”.
+Option(D) is invalid because we can’t assign long value to int type, if we do so we will get compile time error as possible loss of precision.
+
+Question 8/20
+Which of the following is not a basic data type?
+Explanation
+real is not a data type in any of the programming languages.
+int data types is for the representation of integer values, char is for string and characters,
+float and double are for floating point numbers.
+
+Question 9/20
+Which data type is best suited to represent the logical values?
+Explanation
+Boolean data type is best suited to represent the logical values.
+
+Question 10/20
+What will be the output of the following program?
+
+public class Main
+{
+    public static void main (String[]args)
+    {
+        byte b = 1; // line 1
+        b += 2;   //line 2
+        System.out.print(b+” ”);  //line 3
+        b = b + 3;   // line 4
+        System.out.print(b); // line 5
+    }
+}
+Explanation
+At line 2, typecasting is performed internally, So b+=2 means b=(byte)(b+2), Hence line 2 is valid.
+But at line 4, typecasting is required because b+3 will return the value of type Max(byte,int) which is of int type.Hence, we will get compile time error: possible lossy conversion from int to byte.
+
+Question 11/20
+What will be the output of the following program?
+
+ public class Main
+ {
+    int _$;
+    int $7;
+    int do;
+    public static void main(String argv[])
+    {
+        Main test = new Main();
+        test.$7=7;
+        test.do=9;
+        System.out.println(test.$7);
+        System.out.println(test.do);
+        System.out.println(test._$);
+    }
+}
+Explanation
+do is a reserved word in java and we can’t use reserved word as an identifier. Hence do cannot be declared as an variable.
+
+Question 12/20
+Given:
+String #name = "John Doe"; //line 1
+int $age = 24; //line 2
+Double _height = 123.5; // line 3
+double temp = 37.5; //line 4
+Which two statements are true? (Choose two.)
+Explanation
+The only allowed characters in java identifiers are
+
+1)a to z
+
+2) A to Z
+
+3) 0 to 9
+
+4) _
+
+5) $
+
+We can’t use ‘#’ or ‘~’ symbol in an identifier.
+Line 1 and line 4 contains ‘#’ and ‘~’ symbols in an identifier. Hence both the lines will not compile.
+
+Question 13/20
+What is the return type of constructor in java?
+Explanation
+Constructor does not have any return type , not even void.
+
+Question 14/20
+What will be the output of the following program?
+public class Main
+{
+	public static void main(String[] args)
+	{
+	   int var1;
+	   int var2=10;
+	   if(var2%2==0)
+	   var1=20;
+	   int var3=var1+var2;
+	   System.out.println(var3);
+	}
+}
+Explanation
+It is never recommended to perform initialization for the local variable inside logical blocks because there is no guarantee of executing that block.
+Hence compile time error variable var1 might not have been initialized.
+
+Question 15/20
+What will be the output of the following program?
+
+ public class Main
+ {
+    public static void main(String... args)
+    {
+        int i = 4;   //line 1
+        String str = (i<3)?"sunday":(i<5)?"monday":"friday";   //line 2
+        System.out.println(str);   // line 3
+    }
+}
+Explanation
+Ternary operator will also evaluate like an if else statement.
+So, at first
+i=4
+(i<3)  // false, so the else part will get evaluated.
+(i<5) // true , so it will return “monday”
+Hence, “monday” will be printed as an output.
+
+Question 16/20
+What will be the output of the following java program ?
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String s="null";
+        if(s.length()==0)
+            System.out.println("zero");
+        else if(s==null)
+            System.out.println("null");
+        else
+            System.out.println("some");
+    }
+}
+Explanation
+Since the length of the string is not zero and also the string is not null. Hence the output of this program is “some”.
+
+Question 17/20
+Which of the following operations might throw an ArithmeticException?
+Explanation
+Whenever we divide any number with zero, we will get an ArithmeticException. Hence, / will throw an Arithmetic Exception.
+
+Question 18/20
+What will be the output of the following program?
+
+public class Main
+{
+    public static void main (String ... args)
+    {
+        int x = 5;   // line 1
+        x = 7 + 3 * x;  //line 2
+        System.out.println (x);  //line 3
+    }
+}
+Explanation
+The priority of the multiplication operator is greater than the addition operator. Therefore  the expression x=7+3*x is evaluated as :
+x=7+3*x;
+x=7+3*5;   //x=5
+x=7+15;
+x=22.
+Hence, 22 is correct.
+
+
+Question 19/20
+What will be the output of the following java program?
+
+class Main
+{
+    public static void main(String[] args)
+    {
+		System.out.println(10.0/0);
+		System.out.println(0.0/0);
+        System.out.println(0.0/10);
+		System.out.println(-10.0/0);
+    }
+}
+Explanation
+
+In the case of integral arithmetic there is no way to represent “undefined results”. Hence if the result is undefined we will get runtime exception saying Arithmetic Exception.
+
+But in floating point arithmetic (float, double), there is a way to represent undefined result for this Float and Double classes contain “NaN”.
+
+Similarly in floating point arithmetic(float, double), on the division of number with 0 we get "Infinity", for negative number on division with 0 we get "-Infinity".
+
+And, 0.0/10 is a floating point division will give 0.0.
+
+Question 20/20
+What is the default value for object reference?
+Explanation
+The default value for object reference is null.
+
+Question 1/10
+What will be the output of the following program?
+
+public class Main
+{
+   public static void main(String... args)
+   {
+        int a =5 , b=6, c =7;
+        System.out.println("Value is "+ b +c);
+        System.out.println(a + b +c);
+        System.out.println("String "+(b+c));
+   }
+}
+Explanation
+If we use + (addition) operator with the string then the result of both the operands will get concatenated which will result into a new string.
+For example,
+Case 1:  System.out.println(“Value is”+b+c);
+“Value is”+b+c
+“Value is 6”+c  //At first String is concatenated with value of b
+
+“Value is 67”  // then it gets concatenated with value of c
+Case 2:  System.out.println(a+b+c);
+All the variables are of integer type,therefore the result is the sum of a+b+c= 6+7+8=18.
+Case 3: System.out.println(“String ”+(b+c));
+“String”+(b+c)
+“String”+(6+7)  //priority of parentheses is greater
+“String”+13
+“String 13”
+
+Question 2/10
+What will happen when you attempt to compile and run this code?
+
+public class Main
+{
+    public static void main(String argv)
+    {
+        System.out.println("Hello world");
+    }
+}
+Explanation
+The argument type of main method should be String[] type. Hence the code will compile but will complain at run time that main is not correctly defined.
+
+Question 3/10
+What will be the output of the following program ?
+
+ class Main
+ {
+    public static void main(String[] args)
+    {
+        byte b1 = 10;
+        byte b2 = 'a';
+        char ch = 'a';
+        short s1 = 254;
+        double d = 17.435;
+        float f  = 27.435f;
+        long l = 20L;
+        System.out.println("b1: "+b1);
+ 	System.out.println("b2: "+b2);
+ 	System.out.println("ch: "+ch);
+ 	System.out.println("s1: "+s1);
+ 	System.out.println("d: "+d);
+ 	System.out.println("f: "+f);
+ 	System.out.println("l: "+l);
+    }
+ }
+ Explanation
+ Since all the values are in the range of its data type.Therefor, we will not get any compile time errors. The output of the program will be:
+ b1: 10
+ b2 : 97
+ ch: a
+ s1: 254
+ d: 17.435
+ f: 27.435
+ l: 20
+ Note : Suffix ‘L’ or ‘f’ will not get printed as an output.
+
+Question 4/10
+Which method of the Class.class is used to determine the name of a class represented by the class object as a String?
+Explanation
+getName() method of the Class.class is used to determine the name of a class represented by the class object as a string.
+
+
